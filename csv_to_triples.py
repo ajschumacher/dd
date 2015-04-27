@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys, csv
 
 # currently loading everything into memory
