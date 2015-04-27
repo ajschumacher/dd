@@ -25,3 +25,11 @@ def list_of_dicts_to_triple_set(lod, id_name):
                 continue
             triple_set.add((current_id, prop, value))
     return triple_set
+
+
+def filename_to_triple_set(filename):
+    # default to using `index` as ID column for now
+    with open(filename) as f:
+        lod = handle_to_list_of_dicts(f)
+        trips = list_of_dicts_to_triple_set(lod, 'index')
+        return trips
